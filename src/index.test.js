@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import {RightSideNumberInput} from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(RightSideNumberInput).toBeTruthy()
   })
 })
