@@ -15,11 +15,12 @@ export const RightSideNumberInput = forwardRef(
       value,
       onChange,
       numOfDigits = 2,
-      autofocus,
+      autofocus = false,
       dividerSymbol = '.',
       valueSymbol = '',
       className = '',
       style = {},
+      placeholder = '',
     },
     mainRef
   ) => {
@@ -93,15 +94,17 @@ export const RightSideNumberInput = forwardRef(
 
     return (
       <input
+        type="text"
+        inputMode="numeric"
         className={innerClassName}
         autoFocus={autofocus}
-        type="text"
         ref={inputRef}
-        inputMode="numeric"
         onKeyUp={(ect) => handleChange(ect)}
         onChange={() => {}}
         value={displayValue}
         style={style}
+        placeholder={placeholder}
+        data-testid="main-input"
       />
     )
   }
@@ -116,4 +119,5 @@ RightSideNumberInput.propTypes = {
   valueSymbol: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
+  placeholder: PropTypes.string,
 }
