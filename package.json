@@ -4,7 +4,10 @@
   "description": "Made with create-react-library",
   "author": "Raffaele &lt;mori.raffaele@gmail.com&gt;",
   "license": "MIT",
-  "repository": "Raffaele &lt;mori.raffaele@gmail.com&gt;/react-right-side-number-input",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raffaele/react-right-side-number-input"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -27,6 +30,8 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
