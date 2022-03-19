@@ -9,18 +9,40 @@ Component to handle number input to insert digit from rightside.
 ## Install
 
 ```bash
-npm install --save react-right-side-number-input
+npm install git+https://github.com/Raffaele/react-right-side-number-input
 ```
+
+or 
+
+```bash
+yarn add git+https://github.com/Raffaele/react-right-side-number-input
+```
+
+## Example
+
+https://raffaele.github.io/react-right-side-number-input/
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import {useState} from 'react';
+import { RightSideNumberInput } from 'react-right-side-number-input';
+import 'react-right-side-number-input/dist/index.css';
 
-import RightSideNumberInput from 'react-right-side-number-input'
-import 'react-right-side-number-input/dist/index.css'
+const handleChange = (evt) => {
+  setValue(evt.target.value);
+}
 
-const Example = () => <RightSideNumberInput />;
+const Example = () => {
+  const [value, setValue] = useState(0);
+  return <RightSideNumberInput
+    value={value}
+    onChange={handleChange}
+    valueSymbol="$"
+    autofocus
+    numOfDigits={4}
+  />;
+};
 ```
 
 ## License
